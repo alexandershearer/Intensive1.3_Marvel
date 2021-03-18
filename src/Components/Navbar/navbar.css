@@ -1,0 +1,35 @@
+.navbar{
+    background-color: rgb(255, 64, 64);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navLinks{
+
+}
+
+.banner{
+    width: 400px;
+}
+
+.navLinks a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    
+}
+
+.navLinks a:link{
+    text-decoration: none;
+    
+}
