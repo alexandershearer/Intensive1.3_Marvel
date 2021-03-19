@@ -1,11 +1,30 @@
-.navbar{
-    background-color: rgb(255, 64, 64);
+.greeting{
+    padding-top: 90px;
+    padding-left: 20px;
+    align-content: center;
+}
+
+.greetingText{
+    font-size: x-large;
+    font-weight: 500;
+    line-height: 0.5in;
+    padding-top: 30px;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+}
+
+
+.heroGreeting{
+    background-color: rgb(29, 29, 29);
+    margin-top: 100px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    -webkit-box-shadow: -1px 18px 28px -12px rgba(255,0,0,1);
-    -moz-box-shadow: -1px 18px 28px -12px rgba(255,0,0,1);
-    box-shadow: -1px 18px 28px -12px rgba(255,0,0,1);
-    font-weight: 600;
+    -webkit-box-shadow: -1px 18px 28px -12px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 18px 28px -12px rgba(0,0,0,1);
+    box-shadow: -1px 18px 28px -12px rgba(0,0,0,1);
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
      -ms-animation: fadein 2s; /* Internet Explorer */
@@ -13,39 +32,12 @@
          animation: fadein 2s;
 }
 
-.nav {
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.navLinks{
-    font-size: x-large;
-}
-
-.banner{
-    width: 400px;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-     -ms-animation: fadein 2s; /* Internet Explorer */
-      -o-animation: fadein 2s; /* Opera < 12.1 */
-         animation: fadein 2s;
-}
-
-.navLinks a{
-    text-decoration: none;
+.heroesTitle{
     color: white;
-    font-size: large;
+    padding: 0;
+    margin: 0;
     
 }
-
-.navLinks a:link{
-    text-decoration: none;
-    
-}
-
 
 
 @keyframes fadein {
