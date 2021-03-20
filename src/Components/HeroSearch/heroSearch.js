@@ -9,6 +9,12 @@ const styles = ({
         margin: '10px',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    searchHero: {
+        paddingTop: '40px'
+    },
+    searchButton: {
+        marginBottom: '20px'
     }
 })
 
@@ -23,7 +29,8 @@ class HeroSearch extends Component {
                 image: '',
                 totalSeries: '',
                 url: ''
-            }
+            },
+            error: null
         }
     }
 
@@ -37,19 +44,24 @@ class HeroSearch extends Component {
         fetch(url)
             .then((res) => res.json())
             .then((json) => {
-                let data = json.data.results[0]
-                console.log(data)
-                this.setState({
-                    heroInfo: {
-                        name: data.name,
-                        desc: data.description,
-                        image: data.thumbnail.path + '.' + data.thumbnail.extension,
-                        totalSeries: data.series.available,
-                        urls: {
-                            0: data.urls[0].url
-                        }
-                    }
-                })
+                let data = json.data.results
+                console.log(json)
+                if (data.length !== 0) {
+                    this.setState({
+                        heroInfo: {
+                            name: data[0].name,
+                            desc: data[0].description,
+                            image: data[0].thumbnail.path + '.' + data[0].thumbnail.extension,
+                            totalSeries: data[0].series.available,
+                            urls: {
+                                0: data[0].urls[0].url
+                            }
+                        },
+                        error: null
+                    })
+                } else {
+                    this.setState({ error: 'Could not find hero.' })
+                }
             })
     }
 
@@ -58,29 +70,31 @@ class HeroSearch extends Component {
     }
 
     render() {
-        const { heroName } = this.state
+        const { heroName, heroInfo, error } = this.state
         const { classes } = this.props
         return (
-            <div>
+            <div className={classes.searchHero}>
                 <div className={classes.form}>
                     <TextField
-                        id="standard-basic"
+                        className={classes.userInput}
+                        id="outlined-basic"
                         label="Hero Name"
-                        variant="filled"
+                        variant="outlined"
                         onChange={(name) => this.handleChange(name.target.value)}
                     />
+                </div>
+                <div>
                     <Button
+                        className={classes.searchButton}
                         variant='contained'
-                        color='primary'
+                        color='default'
                         onClick={() => this.getHeroByName(heroName)}
                     >
                         Search
                     </Button>
                 </div>
-                <HeroCard
-                    heroInfo={this.state.heroInfo}
-                />
-            </div>
+                {error ? error : <HeroCard heroInfo={heroInfo} />}
+            </div >
         )
     }
 }

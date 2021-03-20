@@ -20,8 +20,8 @@
 .heroGreeting{
     background-color: rgb(29, 29, 29);
     margin-top: 100px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
     -webkit-box-shadow: -1px 18px 28px -12px rgba(0,0,0,1);
     -moz-box-shadow: -1px 18px 28px -12px rgba(0,0,0,1);
     box-shadow: -1px 18px 28px -12px rgba(0,0,0,1);
