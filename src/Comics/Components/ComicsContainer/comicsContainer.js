@@ -19,7 +19,7 @@ class ComicsContainer extends Component {
                     <div>
                         <img className={classes.comicImage} src={this.props.comicInfo.image} alt='char' />
                         <h2>{this.props.comicInfo.title}</h2>
-                        <p>{this.props.comicInfo.pages}</p>
+                        <p>{this.props.comicInfo.pageCount}</p>
                         <p>{this.props.comicInfo.desc}</p>
                     </div>
                     :

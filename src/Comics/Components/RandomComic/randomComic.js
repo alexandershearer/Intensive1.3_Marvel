@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
 import { withStyles, TextField, Button } from '@material-ui/core'
 import md5 from 'md5'
-import ComicsContainer from '../ComicsContainer/comicsContainer'
-import './comicSearch.css'
+import RandomComicContainer from '../RandomComicContainer/randComicCont'
 
 
 const styles = ({
     searchComic: {
-        paddingTop: '20px'
+        paddingTop: '40px'
     },
     searchButton: {
         marginBottom: '20px'
     }
 })
 
-class ComicSearch extends Component {
+class RandomComicSearch extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            title: '',
-            comicInfo: {
+            randComicInfo: {
                 title: '',
                 pages: '',
                 desc: '',
@@ -30,21 +28,23 @@ class ComicSearch extends Component {
         }
     }
 
-    getComicByHero = (title) => {
+    getRandomComic = () => {
         const privateKey = process.env.REACT_APP_API_KEY
         const publicKey = process.env.REACT_APP_PUBLIC_KEY
         const ts = new Date().getTime().toString()
         const hash = md5(ts + privateKey + publicKey)
-        const url = `https://gateway.marvel.com:443/v1/public/comics?title=${title}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+        const randomId = Math.floor(Math.random() * 7000)
+        const url = `https://gateway.marvel.com:443/v1/public/comics?id=${randomId}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
 
         fetch(url)
             .then((res) => res.json())
             .then((json) => {
-                let data = json.data.results
                 console.log(json)
-                if (data.length !== 0) {
+                if (json.code !== 404) {
+                    let data = json.data.results
+                    console.log(json)
                     this.setState({
-                        comicInfo: {
+                        randComicInfo: {
                             title: data[0].title,
                             desc: data[0].description,
                             pages: data[0].pageCount,
@@ -53,43 +53,46 @@ class ComicSearch extends Component {
                         error: null
                     })
                 } else {
-                    this.setState({ error: 'Could not find comic.' })
+                    this.setState({
+                        error: 'We had trouble finding a comic. Try again.',
+                        randComicInfo: {
+                            title: '',
+                            desc: '',
+                            pages: '',
+                            image: '',
+                        }
+                    })
                 }
             })
     }
+
+
 
     handleChange = (value) => {
         this.setState({ title: value })
     }
 
     render() {
-        const { title, comicInfo, error } = this.state
+        const { id, randComicInfo, error } = this.state
+        const { title } = randComicInfo
         const { classes } = this.props
         return (
-            <div className={classes.searchComic}>
-                <div className={classes.form}>
-                    <TextField
-                        className={classes.userInput}
-                        id="outlined-basic"
-                        label="Comic Name"
-                        variant="outlined"
-                        onChange={(title) => this.handleChange(title.target.value)}
-                    />
-                </div>
+            <div>
                 <div>
                     <Button
                         className={classes.searchButton}
                         variant='contained'
                         color='default'
-                        onClick={() => this.getComicByHero(title)}
+                        onClick={() => this.getRandomComic(id)}
                     >
                         Search
                     </Button>
                 </div>
-                {error ? error : <ComicsContainer comicInfo={comicInfo} />}
-            </div >
+                { title !== '' ? <RandomComicContainer randComicInfo={randComicInfo} /> : null}
+                { error ? error : null}
+            </div>
         )
     }
 }
 
-export default (withStyles(styles)(ComicSearch))
+export default (withStyles(styles)(RandomComicSearch))
