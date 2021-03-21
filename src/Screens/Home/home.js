@@ -6,13 +6,15 @@ import HeroSearch from '../../Components/HeroSearch/heroSearch'
 
 const styles = ({
     greeting: {
+        paddingBottom: '100px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
-        width: '90%',
-        maxWidth: '1000px',
-        margin: '0 auto',
+        color: 'black',
+        // width: '90%',
+        // maxWidth: '1000px',
+        // margin: '0 auto',
     },
     photoDiv: {
         display: 'flex',
@@ -33,7 +35,7 @@ class Home extends Component {
         const { classes } = this.props
         return (
             <div>
-                <div className={classes.greeting}>
+                <div id='greetingBody' className={classes.greeting}>
                     <div >
                         <p className='greetingText'>Welcome to a site that is dedicated to introducing you to the world of Marvel!
                         Here you will be able to browse through the heroes of the universe and find which comics
@@ -49,6 +51,12 @@ class Home extends Component {
                     <h1 className='heroesTitle'>Heroes</h1>
                 </div>
                 <HeroSearch />
+                <div>
+                    <img className='comicHeaderImg' src='https://i.pinimg.com/736x/96/98/a5/9698a5d48b9fdb3a9bb49f1e5fa8958d.jpg' />
+                    <img className='comicHeaderImg' src='https://i.pinimg.com/736x/13/8a/b1/138ab1588ee061065f626c726705a39b.jpg' />
+                    <img className='comicHeaderImg' src='https://qph.fs.quoracdn.net/main-qimg-afbc5ab63f9ebbe1cb1cc1c7ddac0fd3' />
+                    <img className='comicHeaderImg' src='https://i.pinimg.com/originals/c8/7b/b4/c87bb4f13f03cb64815435215495204a.jpg' />
+                </div>
             </div>
         )
     }

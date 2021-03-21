@@ -3,7 +3,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/navbar';
 import Home from './Screens/Home/home';
 import Footer from './Components/Footer/footer';
-import comics from './Comics/comics';
+import Comics from './Comics/comics';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Route exact path="/" component={Home} />
-        <Route exact patch="/comics" component={comics} />
+        <Route exact path="/comics" component={Comics} />
         <Footer />
       </div>
     </Router>

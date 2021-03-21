@@ -30,7 +30,7 @@ class Navbar extends Component {
     render() {
         const { classes } = this.props
         return (
-            <div>
+            <div id='navHeader'>
                 <img className={classes.banner} alt='marvelbanner' src='https://www.firstcomicsnews.com/wp-content/uploads/2020/02/Marvel-Studios-logo.png'></img>
 
                 <AppBar className='navbar' position='static'>
