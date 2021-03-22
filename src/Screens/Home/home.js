@@ -50,6 +50,9 @@ class Home extends Component {
                 <div className='heroGreeting'>
                     <h1 className='heroesTitle'>Heroes</h1>
                 </div>
+                <div>
+                    <h2>Search through the Marvel universe for your favorite heroes!</h2>
+                </div>
                 <HeroSearch />
                 <div>
                     <img className='comicHeaderImg' src='https://i.pinimg.com/736x/96/98/a5/9698a5d48b9fdb3a9bb49f1e5fa8958d.jpg' />

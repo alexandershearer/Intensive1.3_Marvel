@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/core'
 
 const styles = ({
     randComicImage: {
-        width: '400px',
-        height: '550px',
+        width: '300px',
+        height: '450px',
         border: '1px solid black',
     }
 })

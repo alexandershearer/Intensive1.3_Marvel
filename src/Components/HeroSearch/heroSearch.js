@@ -11,7 +11,7 @@ const styles = ({
         justifyContent: 'center'
     },
     searchHero: {
-        paddingTop: '40px'
+        paddingTop: '20px'
     },
     searchButton: {
         marginBottom: '20px'
