@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Intensive1.3_Marvel/static/css/main.5d26d8c6.chunk.css",
-    "main.js": "/Intensive1.3_Marvel/static/js/main.22f64173.chunk.js",
-    "main.js.map": "/Intensive1.3_Marvel/static/js/main.22f64173.chunk.js.map",
+    "main.css": "/Intensive1.3_Marvel/static/css/main.10f85553.chunk.css",
+    "main.js": "/Intensive1.3_Marvel/static/js/main.a33ac84b.chunk.js",
+    "main.js.map": "/Intensive1.3_Marvel/static/js/main.a33ac84b.chunk.js.map",
     "runtime-main.js": "/Intensive1.3_Marvel/static/js/runtime-main.e2299702.js",
     "runtime-main.js.map": "/Intensive1.3_Marvel/static/js/runtime-main.e2299702.js.map",
     "static/js/2.5fa45e32.chunk.js": "/Intensive1.3_Marvel/static/js/2.5fa45e32.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.96e2f7d1.chunk.js": "/Intensive1.3_Marvel/static/js/3.96e2f7d1.chunk.js",
     "static/js/3.96e2f7d1.chunk.js.map": "/Intensive1.3_Marvel/static/js/3.96e2f7d1.chunk.js.map",
     "index.html": "/Intensive1.3_Marvel/index.html",
-    "static/css/main.5d26d8c6.chunk.css.map": "/Intensive1.3_Marvel/static/css/main.5d26d8c6.chunk.css.map",
+    "static/css/main.10f85553.chunk.css.map": "/Intensive1.3_Marvel/static/css/main.10f85553.chunk.css.map",
     "static/js/2.5fa45e32.chunk.js.LICENSE.txt": "/Intensive1.3_Marvel/static/js/2.5fa45e32.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e2299702.js",
     "static/js/2.5fa45e32.chunk.js",
-    "static/css/main.5d26d8c6.chunk.css",
-    "static/js/main.22f64173.chunk.js"
+    "static/css/main.10f85553.chunk.css",
+    "static/js/main.a33ac84b.chunk.js"
   ]
 }
