@@ -5,7 +5,10 @@ import ComicSearch from './Components/ComicSearch/comicSearch'
 import RandomComicSearch from './Components/RandomComic/randomComic'
 
 const styles = ({
-
+    comicGreeting: {
+        width: '90%',
+        margin: '0 auto'
+    }
 })
 
 class Comics extends Component {
@@ -20,7 +23,7 @@ class Comics extends Component {
         const { classes } = this.props
         return (
             <div>
-                <div>
+                <div className={classes.comicGreeting}>
                     <h2>There are thousands of comics in the Marvel world! Some of them starring a character and others having a handful
                     of your favorite characters. Search through Marvel's comic library to find info for your future reads!
                     </h2>

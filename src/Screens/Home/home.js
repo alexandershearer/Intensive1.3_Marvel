@@ -6,7 +6,6 @@ import HeroSearch from '../../Components/HeroSearch/heroSearch'
 
 const styles = ({
     greeting: {
-        paddingBottom: '100px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -35,17 +34,19 @@ class Home extends Component {
         const { classes } = this.props
         return (
             <div>
-                <div id='greetingBody' className={classes.greeting}>
-                    <div >
+                <div className={classes.greeting}>
+                    <div id='greetingBody'>
                         <p className='greetingText'>Welcome to a site that is dedicated to introducing you to the world of Marvel!
                         Here you will be able to browse through the heroes of the universe and find which comics
                         they are a part of. That way you can find your favorite heroes and keep up with their comics
                         and any other series they are a part of. Enjoy!
                         </p>
+
+                        <img id='greetingImg' src='https://thealexanderpost.com/wp-content/uploads/2020/06/Whalen_ModernAge_Sm_8ebee4ea-58fe-4c66-9eb2-b520617ebac9_1024x1024.jpg' />
                     </div>
-                    <div className={classes.photoDiv}>
+                    {/* <div className={classes.photoDiv}>
                         <GreetingCarousel />
-                    </div>
+                    </div> */}
                 </div>
                 <div className='heroGreeting'>
                     <h1 className='heroesTitle'>Heroes</h1>

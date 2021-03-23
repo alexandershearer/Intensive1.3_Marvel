@@ -2,6 +2,7 @@
     padding-top: 90px;
     padding-left: 20px;
     align-content: center;
+    
 }
 
 .greetingText{
@@ -9,6 +10,8 @@
     font-weight: 500;
     line-height: 0.5in;
     padding-top: 30px;
+    max-width: 90%;
+    margin: 0 auto;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
      -ms-animation: fadein 2s; /* Internet Explorer */
@@ -16,9 +19,16 @@
          animation: fadein 2s;
 }
 
+#greetingImg{
+    width: 325px;
+    height: 500px;
+}
+
 #greetingBody{
-    background: rgb(237,237,237);
-    background: linear-gradient(0deg, rgba(237,237,237,1) 44%, rgba(255,147,147,1) 100%);
+    background: linear-gradient( rgba(255, 255, 255, 0.767), rgba(255, 255, 255, 0.76) ), url("https://churchm.ag/wp-content/uploads/2013/11/marvel_characters.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
 }
 
 
