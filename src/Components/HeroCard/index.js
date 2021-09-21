@@ -18,10 +18,10 @@ class HeroCard extends Component {
                 {this.props.heroInfo.name !== '' ?
                     <div>
                         <img className={classes.heroImage} src={this.props.heroInfo.image} alt='char' />
-                        <h2>{this.props.heroInfo.name}</h2>
-                        <p>{this.props.heroInfo.desc}</p>
-                        <p>Appears in {this.props.heroInfo.totalSeries} different series</p>
-                        <p>{this.props.heroInfo.url}</p>
+                        <h4>{this.props.heroInfo.name}</h4>
+                        <p className='center-content-80-percent'>{this.props.heroInfo.desc}</p>
+                        <p className='center-content-80-percent'>Appears in {this.props.heroInfo.totalSeries} different series</p>
+                        <p className='center-content-80-percent'>{this.props.heroInfo.url}</p>
                     </div>
                     :
                     null

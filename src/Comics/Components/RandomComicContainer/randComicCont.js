@@ -18,8 +18,7 @@ class RandomComicContainer extends Component {
                 <div>
                     <h2>{this.props.randComicInfo.title}</h2>
                     <img className={classes.randComicImage} src={this.props.randComicInfo.image} alt='char' />
-                    <p>{this.props.randComicInfo.pageCount}</p>
-                    <p>{this.props.randComicInfo.desc}</p>
+                    <p className='center-content-80-percent'>{this.props.randComicInfo.desc}</p>
                 </div>
             </div>
         )

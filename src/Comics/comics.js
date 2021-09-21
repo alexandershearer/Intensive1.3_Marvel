@@ -24,13 +24,13 @@ class Comics extends Component {
         return (
             <div>
                 <div className={classes.comicGreeting}>
-                    <h2>There are thousands of comics in the Marvel world! Some of them starring a character and others having a handful
-                    of your favorite characters. Search through Marvel's comic library to find info for your future reads!
-                    </h2>
+                    <h5>There are thousands of comics in the Marvel world! Some of them starring a character and others having a handful
+                        of your favorite characters. Search through Marvel's comic library to find info for your future reads!
+                    </h5>
                 </div>
                 <ComicSearch />
                 <div>
-                    <h3>If you dont know of any comics, you can click here to find random Marvel comics.</h3>
+                    <h5 className='info-text'>Random Comic</h5>
                 </div>
                 <RandomComicSearch />
                 <div>
