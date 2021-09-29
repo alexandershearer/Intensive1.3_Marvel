@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './comics.css'
 import { withStyles } from '@material-ui/core/'
 import ComicSearch from './Components/ComicSearch/comicSearch'
 import RandomComicSearch from './Components/RandomComic/randomComic'

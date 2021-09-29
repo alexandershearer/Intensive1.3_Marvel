@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { withStyles, TextField, Button } from '@material-ui/core'
 import md5 from 'md5'
 import ComicsContainer from '../ComicsContainer/comicsContainer'
-import './comicSearch.css'
 
 
 const styles = ({
@@ -68,7 +67,7 @@ class ComicSearch extends Component {
         return (
             <div className={classes.searchComic}>
                 <div className={classes.form}>
-                    <TextField
+                    <input
                         className={classes.userInput}
                         id="outlined-basic"
                         label="Comic Name"
@@ -77,14 +76,14 @@ class ComicSearch extends Component {
                     />
                 </div>
                 <div>
-                    <Button
+                    <button
                         className={classes.searchButton}
                         variant='contained'
                         color='default'
                         onClick={() => this.getComicByHero(title)}
                     >
                         Search
-                    </Button>
+                    </button>
                 </div>
                 {error ? error : <ComicsContainer comicInfo={comicInfo} />}
             </div >

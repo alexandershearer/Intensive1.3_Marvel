@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core'
-import './carousel.css'
 
 const styles = ({
 

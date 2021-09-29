@@ -75,7 +75,7 @@ class HeroSearch extends Component {
         return (
             <div className={classes.searchHero}>
                 <div className={classes.form}>
-                    <TextField
+                    <input
                         className={classes.userInput}
                         id="outlined-basic"
                         label="Hero Name"
@@ -84,14 +84,14 @@ class HeroSearch extends Component {
                     />
                 </div>
                 <div>
-                    <Button
+                    <button
                         className={classes.searchButton}
                         variant='contained'
                         color='default'
                         onClick={() => this.getHeroByName(heroName)}
                     >
                         Search
-                    </Button>
+                    </button>
                 </div>
                 {error ? error : <HeroCard heroInfo={heroInfo} />}
             </div >

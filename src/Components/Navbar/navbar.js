@@ -1,19 +1,11 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { AppBar, Toolbar, withStyles } from '@material-ui/core'
-import './navbar.css'
 
 const styles = ({
     navbarContent: {
         display: 'flex',
         justifyContent: 'center',
-
-        '& a': {
-            margin: '0 20px',
-            color: 'white',
-            textDecoration: 'none',
-            fontSize: 'x-large'
-        }
     },
     banner: {
         width: '90%',

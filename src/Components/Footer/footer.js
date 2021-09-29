@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { AppBar, Toolbar, withStyles } from '@material-ui/core'
-import './footer.css'
+
 
 class Footer extends Component {
     constructor(props) {

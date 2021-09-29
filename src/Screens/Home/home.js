@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import './home.css'
 import { withStyles } from '@material-ui/core/'
 import GreetingCarousel from '../../Components/Carousel/carousel'
 import HeroSearch from '../../Components/HeroSearch/heroSearch'
-import './homepage.css'
+
 
 const styles = ({
     greeting: {
@@ -58,7 +57,44 @@ class Home extends Component {
                     <img className='comicHeaderImg' src='https://qph.fs.quoracdn.net/main-qimg-afbc5ab63f9ebbe1cb1cc1c7ddac0fd3' />
                     <img className='comicHeaderImg' src='https://i.pinimg.com/originals/c8/7b/b4/c87bb4f13f03cb64815435215495204a.jpg' />
                 </div>
-            </div>
+
+                <div className="checkSwitch" style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                    <div>
+                        <p>Do you like Iron Man?</p>
+                        <input type='checkbox' id='ironman' />
+                        <label className="switch" for="ironman"></label>
+                    </div>
+                    <div>
+                        <p>Do you like Captain America?</p>
+                        <input type='checkbox' id='cap' />
+                        <label className="switch" for="cap"></label>
+                    </div>
+                    <div>
+                        <p>Do you like Hulk?</p>
+                        <input type='checkbox' id='hulk' />
+                        <label className="switch" for="hulk"></label>
+                    </div>
+                    <div>
+                        <p>Do you like Spider-Man?</p>
+                        <input type='checkbox' id='spidey' />
+                        <label className="switch" for="spidey"></label>
+                    </div>
+                </div>
+
+                <div class="choice-container">
+
+                    <input type="radio" id="iron" name="choice" />
+                    <label class="radio" for="iron">Iron Man</label>
+
+                    <input type="radio" id="capr" name="choice" />
+                    <label class="radio" for="capr">Captain America</label>
+
+                    <input type="radio" id="spideyr" name="choice" />
+                    <label class="radio" for="spideyr">Spidey</label>
+
+                </div>
+
+            </div >
         )
     }
 }

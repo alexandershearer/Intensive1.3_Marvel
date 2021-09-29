@@ -79,17 +79,17 @@ class RandomComicSearch extends Component {
         return (
             <div>
                 <div>
-                    <Button
+                    <button
                         className={classes.searchButton}
                         variant='contained'
                         color='default'
                         onClick={() => this.getRandomComic(id)}
                     >
                         Search
-                    </Button>
+                    </button>
                 </div>
-                { title !== '' ? <RandomComicContainer randComicInfo={randComicInfo} /> : null}
-                { error ? error : null}
+                {title !== '' ? <RandomComicContainer randComicInfo={randComicInfo} /> : null}
+                {error ? error : null}
             </div>
         )
     }

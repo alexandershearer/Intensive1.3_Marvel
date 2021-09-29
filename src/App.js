@@ -1,4 +1,5 @@
 import './App.css';
+import './framework.css';
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/navbar';
 import Home from './Screens/Home/home';

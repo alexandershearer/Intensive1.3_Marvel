@@ -19,8 +19,8 @@ class HeroCard extends Component {
                     <div>
                         <img className={classes.heroImage} src={this.props.heroInfo.image} alt='char' />
                         <h4>{this.props.heroInfo.name}</h4>
-                        <p className='center-content-80-percent'>{this.props.heroInfo.desc}</p>
-                        <p className='center-content-80-percent'>Appears in {this.props.heroInfo.totalSeries} different series</p>
+                        <h5 className='center-content-80-percent'>{this.props.heroInfo.desc}</h5>
+                        <h6 className='center-content-80-percent'>Appears in {this.props.heroInfo.totalSeries} different series</h6>
                         <p className='center-content-80-percent'>{this.props.heroInfo.url}</p>
                     </div>
                     :
